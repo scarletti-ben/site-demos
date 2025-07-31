@@ -132,7 +132,6 @@ for (const [name, value] of Object.entries(backgroundColours)) {
 
 backgroundSelector.addEventListener('change', function () {
     const selectedBackground = this.value;
-    console.log(selectedBackground);
     if (selectedBackground === 'default') {
         document.body.style.background = '';
     } else {
@@ -248,7 +247,7 @@ document.addEventListener('keydown', (event) => {
     let change;
     if (key === "ArrowDown" || key === "ArrowLeft") {
         change = -1;
-    } else if (key === "ArrowUp" || key === "ArrowRight"){
+    } else if (key === "ArrowUp" || key === "ArrowRight") {
         change = +1;
     }
 

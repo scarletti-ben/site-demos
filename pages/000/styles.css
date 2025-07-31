@@ -8,6 +8,10 @@
 ~ Custom Styling
 ~ ====================================================== */
 
+body {
+  background: rgb(40, 40, 40);
+}
+
 /* < ========================
 < Main Element Styling
 < ======================== */
@@ -22,7 +26,6 @@
   flex-direction: column;
   overflow: auto;
   position: relative;
-  background: rgb(40, 40, 40);
 }
 
 /* < ========================
