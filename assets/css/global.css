@@ -1,0 +1,167 @@
+/* ~ ======================================================
+~ Global Styling
+~ ====================================================== */
+
+/* > ========================
+> Root Variables
+> ======================== */
+
+:root {
+  --background: hsl(0, 0%, 20%);
+  --background-lighter: hsl(0, 0%, 40%);
+  --background-darker: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 70%);
+  --foreground-lighter: hsl(0, 0%, 100%);
+  --foreground-darker: hsl(0, 0%, 40%);
+  --accent: hsl(180, 100%, 55%);
+  --accent-lighter: hsl(180, 100%, 75%);
+  --accent-darker: hsl(180, 100%, 35%);
+  --scrollbar: #545d67 transparent;
+  --font-family: Consolas, monospace;
+  --font-size: 14px;
+  --line-height: 1.5;
+  --unit: 36px;
+}
+
+/* > ========================
+> Theme: Monochrome
+> ======================== */
+
+[data-theme="monochrome"] {
+  --background: hsl(0, 0%, 8%);
+  --background-lighter: hsl(0, 0%, 35%);
+  --background-darker: hsl(0, 0%, 12%);
+  --foreground: hsl(0, 0%, 41%);
+  --foreground-lighter: hsl(0, 0%, 70%);
+  --foreground-darker: hsl(0, 0%, 19%);
+  --accent: hsl(180, 100%, 55%);
+  --accent-lighter: hsl(180, 100%, 75%);
+  --accent-darker: hsl(180, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Emerald
+> ======================== */
+
+[data-theme="emerald"] {
+  --background: hsl(162, 88%, 8%);
+  --background-lighter: hsl(162, 73%, 35%);
+  --background-darker: hsl(162, 93%, 12%);
+  --foreground: hsl(162, 31%, 41%);
+  --foreground-lighter: hsl(162, 78%, 70%);
+  --foreground-darker: hsl(162, 88%, 19%);
+  --accent: hsl(342, 100%, 55%);
+  --accent-lighter: hsl(342, 100%, 75%);
+  --accent-darker: hsl(342, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Ocean
+> ======================== */
+
+[data-theme="ocean"] {
+  --background: hsl(210, 88%, 8%);
+  --background-lighter: hsl(210, 73%, 35%);
+  --background-darker: hsl(210, 93%, 12%);
+  --foreground: hsl(210, 31%, 41%);
+  --foreground-lighter: hsl(210, 78%, 70%);
+  --foreground-darker: hsl(210, 88%, 19%);
+  --accent: hsl(30, 100%, 55%);
+  --accent-lighter: hsl(30, 100%, 75%);
+  --accent-darker: hsl(30, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Sunset
+> ======================== */
+
+[data-theme="sunset"] {
+  --background: hsl(15, 88%, 8%);
+  --background-lighter: hsl(15, 73%, 35%);
+  --background-darker: hsl(15, 93%, 12%);
+  --foreground: hsl(15, 31%, 41%);
+  --foreground-lighter: hsl(15, 78%, 70%);
+  --foreground-darker: hsl(15, 88%, 19%);
+  --accent: hsl(195, 100%, 55%);
+  --accent-lighter: hsl(195, 100%, 75%);
+  --accent-darker: hsl(195, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Forest
+> ======================== */
+
+[data-theme="forest"] {
+  --background: hsl(120, 88%, 8%);
+  --background-lighter: hsl(120, 73%, 35%);
+  --background-darker: hsl(120, 93%, 12%);
+  --foreground: hsl(120, 31%, 41%);
+  --foreground-lighter: hsl(120, 78%, 70%);
+  --foreground-darker: hsl(120, 88%, 19%);
+  --accent: hsl(300, 100%, 55%);
+  --accent-lighter: hsl(300, 100%, 75%);
+  --accent-darker: hsl(300, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Neon
+> ======================== */
+
+[data-theme="neon"] {
+  --background: hsl(300, 88%, 8%);
+  --background-lighter: hsl(300, 73%, 35%);
+  --background-darker: hsl(300, 93%, 12%);
+  --foreground: hsl(300, 31%, 41%);
+  --foreground-lighter: hsl(300, 78%, 70%);
+  --foreground-darker: hsl(300, 88%, 19%);
+  --accent: hsl(120, 100%, 55%);
+  --accent-lighter: hsl(120, 100%, 75%);
+  --accent-darker: hsl(120, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Amber
+> ======================== */
+
+[data-theme="amber"] {
+  --background: hsl(45, 88%, 8%);
+  --background-lighter: hsl(45, 73%, 35%);
+  --background-darker: hsl(45, 93%, 12%);
+  --foreground: hsl(45, 31%, 41%);
+  --foreground-lighter: hsl(45, 78%, 70%);
+  --foreground-darker: hsl(45, 88%, 19%);
+  --accent: hsl(225, 100%, 55%);
+  --accent-lighter: hsl(225, 100%, 75%);
+  --accent-darker: hsl(225, 100%, 35%);
+}
+
+/* > ========================
+> HTML and Body Styling
+> ======================== */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: block;
+  overflow: auto;
+  position: relative;
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  scrollbar-color: var(--scrollbar);
+}
+
+/* > ========================
+> Wildcard Styling
+> ======================== */
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+}
