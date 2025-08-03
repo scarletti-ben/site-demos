@@ -1,0 +1,325 @@
+/* ~ ======================================================
+~ Global Styling
+~ ====================================================== */
+
+/* > ========================
+> Root Variables
+> ======================== */
+
+:root {
+  --surface: hsl(0, 0%, 20%);
+  --surface-lighter: hsl(0, 0%, 40%);
+  --surface-darker: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 70%);
+  --foreground-lighter: hsl(0, 0%, 100%);
+  --foreground-darker: hsl(0, 0%, 40%);
+  --accent: hsl(180, 100%, 55%);
+  --accent-lighter: hsl(180, 100%, 75%);
+  --accent-darker: hsl(180, 100%, 35%);
+  --scrollbar: hsl(212, 10%, 37%) transparent;
+  --font-family: Consolas, monospace;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --double: 48px;
+  --more: 36px;
+  --single: 24px;
+  --half: 12px;
+}
+
+/* > ========================
+> Theme: Monochrome
+> ======================== */
+
+[data-theme="monochrome"] {
+  --surface: hsl(0, 0%, 8%);
+  --surface-lighter: hsl(0, 0%, 35%);
+  --surface-darker: hsl(0, 0%, 12%);
+  --foreground: hsl(0, 0%, 41%);
+  --foreground-lighter: hsl(0, 0%, 70%);
+  --foreground-darker: hsl(0, 0%, 19%);
+  --accent: hsl(180, 100%, 55%);
+  --accent-lighter: hsl(180, 100%, 75%);
+  --accent-darker: hsl(180, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Emerald
+> ======================== */
+
+[data-theme="emerald"] {
+  --surface: hsl(162, 88%, 8%);
+  --surface-lighter: hsl(162, 73%, 35%);
+  --surface-darker: hsl(162, 93%, 12%);
+  --foreground: hsl(162, 31%, 41%);
+  --foreground-lighter: hsl(162, 78%, 70%);
+  --foreground-darker: hsl(162, 88%, 19%);
+  --accent: hsl(342, 100%, 55%);
+  --accent-lighter: hsl(342, 100%, 75%);
+  --accent-darker: hsl(342, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Ocean
+> ======================== */
+
+[data-theme="ocean"] {
+  --surface: hsl(210, 88%, 8%);
+  --surface-lighter: hsl(210, 73%, 35%);
+  --surface-darker: hsl(210, 93%, 12%);
+  --foreground: hsl(210, 31%, 41%);
+  --foreground-lighter: hsl(210, 78%, 70%);
+  --foreground-darker: hsl(210, 88%, 19%);
+  --accent: hsl(30, 100%, 55%);
+  --accent-lighter: hsl(30, 100%, 75%);
+  --accent-darker: hsl(30, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Sunset
+> ======================== */
+
+[data-theme="sunset"] {
+  --surface: hsl(15, 88%, 8%);
+  --surface-lighter: hsl(15, 73%, 35%);
+  --surface-darker: hsl(15, 93%, 12%);
+  --foreground: hsl(15, 31%, 41%);
+  --foreground-lighter: hsl(15, 78%, 70%);
+  --foreground-darker: hsl(15, 88%, 19%);
+  --accent: hsl(195, 100%, 55%);
+  --accent-lighter: hsl(195, 100%, 75%);
+  --accent-darker: hsl(195, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Forest
+> ======================== */
+
+[data-theme="forest"] {
+  --surface: hsl(120, 88%, 8%);
+  --surface-lighter: hsl(120, 73%, 35%);
+  --surface-darker: hsl(120, 93%, 12%);
+  --foreground: hsl(120, 31%, 41%);
+  --foreground-lighter: hsl(120, 78%, 70%);
+  --foreground-darker: hsl(120, 88%, 19%);
+  --accent: hsl(300, 100%, 55%);
+  --accent-lighter: hsl(300, 100%, 75%);
+  --accent-darker: hsl(300, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Neon
+> ======================== */
+
+[data-theme="neon"] {
+  --surface: hsl(300, 88%, 8%);
+  --surface-lighter: hsl(300, 73%, 35%);
+  --surface-darker: hsl(300, 93%, 12%);
+  --foreground: hsl(300, 31%, 41%);
+  --foreground-lighter: hsl(300, 78%, 70%);
+  --foreground-darker: hsl(300, 88%, 19%);
+  --accent: hsl(120, 100%, 55%);
+  --accent-lighter: hsl(120, 100%, 75%);
+  --accent-darker: hsl(120, 100%, 35%);
+}
+
+/* > ========================
+> Theme: Amber
+> ======================== */
+
+[data-theme="amber"] {
+  --surface: hsl(45, 88%, 8%);
+  --surface-lighter: hsl(45, 73%, 35%);
+  --surface-darker: hsl(45, 93%, 12%);
+  --foreground: hsl(45, 31%, 41%);
+  --foreground-lighter: hsl(45, 78%, 70%);
+  --foreground-darker: hsl(45, 88%, 19%);
+  --accent: hsl(225, 100%, 55%);
+  --accent-lighter: hsl(225, 100%, 75%);
+  --accent-darker: hsl(225, 100%, 35%);
+}
+
+/* > ========================
+> HTML and Body Styling
+> ======================== */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  overflow: auto;
+  position: relative;
+  background: rgb(42, 42, 42);
+  color: var(--foreground);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  scrollbar-color: var(--scrollbar);
+}
+
+/* < ========================
+< Utility Classes
+< ======================== */
+
+.hidden {
+  display: none !important;
+}
+
+/* > ========================
+> Wildcard Styling
+> ======================== */
+
+* {
+  box-sizing: border-box;
+  /* box-shadow: 0 0 0 1px red; */
+}
+
+/* ~ ======================================================
+~ Project Styling
+~ ====================================================== */
+
+#page {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 0 1px blue; */
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: block;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.edge {
+  width: 100%;
+  height: var(--double);
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--single);
+  padding: 0 var(--single);
+}
+
+.edge .button-set {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--single);
+}
+
+.edge .button {
+  width: var(--single);
+  height: var(--single);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--foreground-lighter);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  box-shadow: 0 0 0 1px var(--foreground-darker);
+}
+
+#footer {
+  border-top: 2px solid var(--foreground-darker);
+}
+
+#footer-date {
+  color: var(--foreground-lighter);
+}
+
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+  flex: 1 1 auto;
+}
+
+#textarea {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  padding: var(--single);
+  /* padding: 0px; */
+  display: block;
+  border: none;
+  outline: none;
+  resize: none;
+  margin: 0px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--foreground-lighter);
+}
+
+#textarea.experimental {
+  padding: var(--half);
+  scrollbar-gutter: stable both-edges;
+}
+
+#footer-date {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* < ========================
+< Modal Element Styling
+< ======================== */
+
+#modal {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+#modal.shown {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal-content {
+  /* width: 80%;
+  height: 80%; */
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  /* overflow: auto; */
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 0 1px red; */
+}

@@ -153,7 +153,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-family);
   font-size: var(--font-size);
+  line-height: var(--line-height);
   scrollbar-color: var(--scrollbar);
+}
+
+/* < ========================
+< Utility Classes
+< ======================== */
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  opacity: 0 !important;
 }
 
 /* > ========================
@@ -163,5 +176,4 @@ body {
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
-  line-height: var(--line-height);
 }

@@ -12,12 +12,13 @@ const dates = {
     current: new Date(),
     calendar: new Date()
 }
-dates.calendar.setDate(1); // Set calendar day to first of the month
+
+// Set calendar day to first of the month
+dates.calendar.setDate(1); 
 
 // > ======================================================
 // > Populate Calendar
 // > ======================================================
-
 
 // Function to populate the calendar grid
 function populateCalendar() {
@@ -26,7 +27,9 @@ function populateCalendar() {
 
     // Get first day of the month and what day of week it falls on
     const firstDay = new Date(year, month, 1);
-    const startingDayOfWeek = (firstDay.getDay() + 6) % 7; // Convert Sunday=0 to Monday=0
+
+    // Convert Sunday = 0 to Monday = 0
+    const startingDayOfWeek = (firstDay.getDay() + 6) % 7; 
 
     // Get number of days in current month
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -34,10 +37,10 @@ function populateCalendar() {
     // Get number of days in previous month
     const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-    // Get all date cells (skip header row)
+    // Get all date cells
     const rows = document.querySelectorAll('.row');
     const dateCells = [];
-    for (let i = 1; i < rows.length; i++) { // Skip first row (headers)
+    for (let i = 1; i < rows.length; i++) { 
         dateCells.push(...rows[i].querySelectorAll('.cell'));
     }
 
@@ -215,7 +218,6 @@ rightButton.addEventListener('click', () => {
 // < Other
 // < ======================================================
 
-// Add this after your existing code
 document.querySelector('.table').addEventListener('click', (event) => {
     if (event.target.classList.contains('cell') && event.target.textContent.match(/^\d+$/)) {
         if (event.target.classList.contains('inactive')) {
